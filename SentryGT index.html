@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentry — Stop before you click</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      Sentry
+    </div>
+    <nav class="nav-links">
+      <a href="#checker">Try it</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="#waitlist" class="btn btn-primary btn-small">Join the waitlist</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Real-time link &amp; download protection</p>
+      <h1>Stop <em>before</em> you click.</h1>
+      <p class="lede">
+        Sentry checks every link and download the second it reaches you — before the tap,
+        before the damage — and steps in with a plain-language warning when something looks wrong.
+      </p>
+      <div class="hero-actions">
+        <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="msg-bubble">
+            <p class="msg-sender">Unknown Sender</p>
+            <p class="msg-text">Your package couldn't be delivered. Confirm your address here: <span class="fake-link">bit.ly/3xk9Lp</span></p>
+          </div>
+          <div class="intercept-card">
+            <div class="intercept-head">
+              <span class="intercept-icon">!</span>
+              <p class="intercept-title">Sentry flagged this link</p>
+            </div>
+            <p class="intercept-body">Link mimics a shipping carrier and was created 2 days ago. Opening it is not recommended.</p>
+            <div class="intercept-actions">
+              <span class="pill pill-danger">Don't open</span>
+              <span class="pill pill-outline">Show details</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="checker" class="checker wrap">
+    <p class="eyebrow">Try it now</p>
+    <h2>Paste a link or message. See what Sentry sees.</h2>
+    <p class="checker-sub">
+      This runs entirely in your browser using pattern-based heuristics — no data is sent
+      anywhere. It's a prototype of the detection logic, not yet backed by live threat databases.
+    </p>
+
+    <div class="checker-card">
+      <label for="checker-input" class="visually-hidden">Paste a link or message</label>
+      <textarea id="checker-input" placeholder="Paste a link or the full message here, e.g. &quot;Your package couldn't be delivered. Confirm your address: bit.ly/3xk9Lp&quot;"></textarea>
+      <button id="checker-btn" class="btn btn-primary">Check for risk</button>
+
+      <div id="checker-result" class="checker-result" hidden>
+        <div id="result-badge" class="result-badge"></div>
+        <ul id="result-reasons" class="result-reasons"></ul>
+        <p id="result-empty" class="result-empty" hidden>No links found in the pasted text — try including the full URL.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>Scams don't announce themselves.</h2>
+    <p class="problem-copy">
+      Most people don't fall for scams because they're careless — they fall for them because a
+      malicious link is designed to look exactly like the real thing, arriving at exactly the
+      wrong moment. By the time something feels off, the click already happened. Sentry moves that
+      moment of doubt earlier, so it happens before the click instead of after.
+    </p>
+  </section>
+
+  <section id="how" class="how wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three checks, before you ever tap.</h2>
+    <ol class="how-steps">
+      <li class="how-step">
+        <span class="step-num">01</span>
+        <div>
+          <p class="step-title">A link or file reaches you</p>
+          <p class="step-detail">Text, email, DM, download — Sentry watches the moment something new arrives, without reading your actual conversations.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <span class="step-num">02</span>
+        <div>
+          <p class="step-title">Sentry checks it instantly</p>
+          <p class="step-detail">Domain age, known scam patterns, and mismatched branding are checked in real time — in the background, before you interact with it.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <span class="step-num">03</span>
+        <div>
+          <p class="step-title">You get a plain-language warning</p>
+          <p class="step-detail">No jargon, no security-team speak — just a clear heads-up on what looks wrong and why, so you can decide with the full picture.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="features" class="features wrap">
+    <p class="eyebrow">What's inside</p>
+    <h2>Built for the moment before the mistake.</h2>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Real-time link scanning</h3>
+        <p>Every link is checked as it arrives, not after you've already tapped it.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Download warnings</h3>
+        <p>Flags risky file types and spoofed installers before they land on your device.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Works where you already are</h3>
+        <p>Runs quietly across texts, email, and browsing — no separate app to remember to open.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Plain-language warnings</h3>
+        <p>Explains what looks wrong in normal words, not a technical report you have to decode.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="about wrap">
+    <p class="eyebrow">Why I'm building this</p>
+    <h2>I've seen this exact moment, in person.</h2>
+    <p class="about-copy">
+      I'm Tushar — currently an Apple Specialist and a cybersecurity student. A big part of my day
+      is sitting across from someone who clicked something they shouldn't have, trying to undo the
+      damage after the fact. Sentry is the tool I keep wishing they'd had five minutes earlier: something
+      that catches the moment of doubt before it turns into a mistake, not after.
+    </p>
+  </section>
+
+  <section id="waitlist" class="waitlist wrap">
+    <div class="waitlist-card">
+      <h2>Get early access.</h2>
+      <p>Join the waitlist and be first to try Sentry when it launches.</p>
+      <form id="waitlist-form" class="waitlist-form">
+        <label for="email" class="visually-hidden">Email address</label>
+        <input id="email" type="email" placeholder="you@email.com" required>
+        <button type="submit" class="btn btn-primary">Notify me</button>
+      </form>
+      <p id="waitlist-confirm" class="waitlist-confirm" hidden>You're on the list — thanks for signing up.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      Sentry
+    </div>
+    <p>A concept project by Tushar.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('waitlist-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    this.hidden = true;
+    document.getElementById('waitlist-confirm').hidden = false;
+  });
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
